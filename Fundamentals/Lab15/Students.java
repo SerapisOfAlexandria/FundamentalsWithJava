@@ -35,23 +35,3 @@ public class Students {
     }
 }
 
-class Student {
-    String firstname, lastname, town;
-    int age;
-
-    public Student(String firstname, String lastname, int age, String town) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.town = town;
-        this.age = age;
-    }
-
-    public boolean isFromTown(String town) {
-        if (this.town.equals(town)) {
-           return true;
-        } else {
-            return false;
-        }
-    }
-
-}
