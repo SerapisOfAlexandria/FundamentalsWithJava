@@ -33,5 +33,6 @@ public class CompanyUsers {
                                 .map(empl -> "-- " + empl)
                                 .collect(Collectors.joining("\n")))
                 .forEach(System.out::println);
+
     }
 }
