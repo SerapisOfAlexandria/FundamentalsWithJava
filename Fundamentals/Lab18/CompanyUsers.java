@@ -1,4 +1,4 @@
-package Lab18;
+package Fundamentals.Lab18;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,7 +19,9 @@ public class CompanyUsers {
             String employee = companyAndEmploye[1];
 
             if (employeesInCompanies.containsKey(company)) {
-                employeesInCompanies.get(company).add(employee);
+                if (!employeesInCompanies.get(company).stream().anyMatch(entry -> entry.equals(employee))) {
+                    employeesInCompanies.get(company).add(employee);
+                }
             } else {
                 employeesInCompanies.put(company, new ArrayList<>(Arrays.asList(employee)));
             }
