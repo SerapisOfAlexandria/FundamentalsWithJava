@@ -1,5 +1,6 @@
-package Lab19;
+package Fundamentals.Lab19;
 
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class ReverseString {
@@ -7,16 +8,26 @@ public class ReverseString {
 
         Scanner input = new Scanner(System.in);
 
-        char[] string = input.nextLine().toCharArray();
+        LinkedHashMap<String, String> stringEntries = new LinkedHashMap<>();
+        String string = input.nextLine();
+        char[] word = string.toCharArray();
 
-        for (int i = 0; i <= (string.length - 1) / 2; i++) {
-            char temp = string[i];
-            string[i] = string[string.length - (i + 1)];
-            string[string.length - (i + 1)] = temp;
+
+        while (!String.valueOf(word).equals("end")) {
+            for (int i = 0; i <= (word.length - 1) / 2; i++) {
+                char temp = word[i];
+                word[i] = word[word.length - (i + 1)];
+                word[word.length - (i + 1)] = temp;
+            }
+            String reversedString = new String(word);
+            stringEntries.put(string, reversedString);
+
+            string = input.nextLine();
+            word = string.toCharArray();
         }
 
-        String reversedString = new String(string);
-
-        System.out.println(reversedString);
+        stringEntries.entrySet().stream()
+                .map(stringEntry -> stringEntry.getKey() + " = " + stringEntry.getValue())
+                .forEach(System.out::println);
     }
 }
