@@ -1,7 +1,9 @@
-package Lab20;
+package Fundamentals.Lab20;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+
 public class StringExplosion {
     public static void main(String[] args) {
 
@@ -17,14 +19,25 @@ public class StringExplosion {
         int pointer = 0;
 
         while (pointer <= string.size() - 1) {
-
             if (string.get(pointer) == '>') {
-                for (int i = pointer; i <= pointer + )
+                pointer++;
+
+                for (int i = Character.getNumericValue(string.get(pointer)); i > 0; i--) {
+                    if (pointer > string.size() - 1) {
+                        break;
+                    }
+                    if (string.get(pointer) == '>') {
+                        pointer++;
+                        i += Character.getNumericValue(string.get(pointer)) + 1;
+                    } else {
+                        string.remove(pointer);
+                    }
+                }
+            } else {
+                pointer++;
             }
         }
-    }
 
-    public static void explode(int pointer, ArrayList<String> symbolList) {
-
+        System.out.println(string.stream().map(c -> c + "").collect(Collectors.joining("")));
     }
 }
