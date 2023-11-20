@@ -26,6 +26,7 @@ public class StringExplosion {
                     if (pointer > string.size() - 1) {
                         break;
                     }
+
                     if (string.get(pointer) == '>') {
                         pointer++;
                         i += Character.getNumericValue(string.get(pointer)) + 1;
