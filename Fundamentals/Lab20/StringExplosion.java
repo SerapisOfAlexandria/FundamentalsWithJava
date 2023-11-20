@@ -1,30 +1,25 @@
 package Lab20;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
+
 public class StringExplosion {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-        ArrayList<Character> string = new ArrayList<>();
-        char[] charredString = input.nextLine().toCharArray();
-        StringBuilder finishedString = new StringBuilder();
+        ArrayList<Character> map = new ArrayList<>();
 
-        for (char a : charredString) {
-            string.add(a);
-        }
+        map.add('a');
+        map.add('b');
+        map.add('c');
+        map.add('d');
+
         int pointer = 0;
 
-        while (pointer <= string.size() - 1) {
+        while (pointer <= map.size()) {
 
-            if (string.get(pointer) == '>') {
-                for (int i = pointer; i <= pointer + )
-            }
+
+
         }
-    }
-
-    public static void explode(int pointer, ArrayList<String> symbolList) {
-
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab1 BasicSyntax,Conditional Statements and Loops" isTestSource="false" packagePrefix="Fundamentals.Lab1" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab2 BasicSyntax,Conditional Statements and Loops Exercise" isTestSource="false" packagePrefix="Fundamentals.Lab2" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab3 Data Types and Variables" isTestSource="false" packagePrefix="Fundamentals.Lab3" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab4 Data Types and Variables Exercise" isTestSource="false" packagePrefix="Fundamentals.Lab4" />
+      <sourceFolder url="file://$MODULE_DIR$/Lab6 Arrays" isTestSource="false" packagePrefix="Fundamentals.Lab6" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
