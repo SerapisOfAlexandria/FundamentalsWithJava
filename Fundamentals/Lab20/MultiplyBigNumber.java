@@ -9,31 +9,22 @@ public class MultiplyBigNumber {
 
         Scanner input = new Scanner(System.in);
 
-        StringBuilder multiplicand = new StringBuilder(input.nextLine());
-        int multiple = Integer.parseInt(input.nextLine());
+       StringBuilder multiplicand = new StringBuilder(input.nextLine());
+       int multiple = Integer.parseInt(input.nextLine());
 
-        System.out.println(calculateBig(multiplicand, multiple));
+       StringBuilder product = new StringBuilder();
+       int carry = 0;
 
-    }
+       for (int position = multiplicand.length() - 1; position >= 0; position--) {
+           int digit = Character.getNumericValue(multiplicand.charAt(position));
+           int result = digit * multiple + carry;
 
-    public static StringBuilder calculateBig(StringBuilder multiplicand, int multiple){
-         if (multiple == 0) {
-            return new StringBuilder("0");
-         }
+           carry = result / 10;
+           product.insert(0, result % 10);
+       }
 
-        StringBuilder product = new StringBuilder();
-        int carry = 0;
+        System.out.println(product);
 
-        for (int i = multiplicand.length() - 1; i >= 0; i--) {
-            int multiplication = Character.getNumericValue(multiplicand.charAt(i)) * multiple + carry;
-            product.append(multiplication % 10);
-            carry = multiplication / 10;
-        }
 
-        if (carry != 0) {
-            product.append(carry);
-        }
-
-        return product.reverse();
     }
 }

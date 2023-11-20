@@ -1,4 +1,4 @@
-package Lab20;
+package Fundamentals.Lab20;
 
 import java.util.*;
 import java.util.stream.Collectors;
