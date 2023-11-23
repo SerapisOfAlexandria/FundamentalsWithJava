@@ -19,7 +19,7 @@ public class StringExplosion {
         while (pointer <= string.size() - 1) {
 
             if (string.get(pointer) == '>') {
-                for (int i = pointer; i <= pointer + )
+//                for (int i = pointer; i <= pointer + )
             }
         }
     }
